@@ -6,75 +6,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-html {
-  font-size: 0.8rem;
-}
 
-@include media-breakpoint-up(xs) {
-  html {
-    font-size: 1rem;
-  }
-}
-
-.container {
-   min-width: 350px;
-    max-width: 961px;
-    
-}
-
-
-
-.progress-bar {
-  border: 2px solid #9B51E0;
-  margin-bottom: 20px;
-}
 
 /* -------------------logo search -------------------*/
 
-.logo {
-  position: relative;
-}
 
-.logo-rectangle {
-  height: 48px;
-  width: 50px;
-  border: 3px solid #FFC740;
-}
-
-.logo .super-logo {
-  position: absolute;
-  height: 26px;
-  min-width: 64px;
-  top: 12px;
-  left: 22px;
-  background: white;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 28px;
-}
-
-.search {
-  
-
-}
-
-.search .input-group {
-    border: 1px solid #6D3D99;
- }
-
-.search .input-group-btn {
-  background: #9B51E0;
-  color: white;
-  font-size: 0.875rem;
-  line-height: 2rem;
-}
-
-.form-control:focus {
-    border: none !important;
-    outline: 0 !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-}
 
 /* -------------------menu ----------------------------------*/
 
