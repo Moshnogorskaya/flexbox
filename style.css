@@ -296,6 +296,8 @@ header {
 	text-decoration: none;
 	font-size: 3rem;
 	color: #FFC740;
+	border: 0;
+	outline: 0;
 }
 
 
