@@ -1,9 +1,68 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input[type="text"]{
+    outline: 0;
+    box-shadow: none;
+}
+
+
+
+
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 
 
 body {
     font-family: 'Roboto', sans-serif;
+    font-size: 12px;
 }
 
 
@@ -13,6 +72,233 @@ body {
 
 
 /* -------------------menu ----------------------------------*/
+
+
+/*
+ Default styles + Mobile first
+ Offscreen menu style
+*/
+.menu {
+  position: absolute;
+  width: 60%;
+  right: -60%;
+  top: 0;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: visible;
+  transition: right 0.3s ease,
+              box-shadow 0.3s ease;
+  z-index: 999;
+}
+
+.nav-body {
+  list-style: none;
+  /* Hide shadow w/-8px while 'closed' */
+  -webkit-box-shadow: -8px 0 8px rgba(0,0,0,.5);
+     -moz-box-shadow: -8px 0 8px rgba(0,0,0,.5);
+          box-shadow: -8px 0 8px rgba(0,0,0,.5);
+  min-height: 100%;
+  background: white;
+  padding-top: 40px;
+ 
+}
+
+
+.menu-close__link {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 2rem;
+  color: #FFC740;
+}
+
+header {
+  display: flex;
+  align-items: baseline;
+}
+
+
+
+
+/*
+ On small devices, allow it to toggle...
+*/
+
+.menu:target {
+  right: 0;
+  outline: none;
+  -moz-box-shadow: 3px 0 12px rgba(0,0,0,.25);
+  -webkit-box-shadow: 3px 0 12px rgba(0,0,0,.25);
+  box-shadow: 3px 0 12px rgba(0,0,0,.25);
+}
+
+.menu:target .menu-close__link {
+  z-index: 1001;
+}
+
+.menu:target .nav-body {
+  position: relative;
+  z-index: 1000;
+}
+
+/* 
+ We could us `.main-menu:target:after`, but
+ it wouldn't be clickable.
+*/
+.menu:target + .backdrop {
+  position: absolute;
+  display: block;  
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  cursor: default;
+}
+
+@supports (position: fixed) {
+  .menu,
+  .menu:target + .backdrop {
+    position: fixed;
+  }
+}
+
+/*
+ Larger screen styling
+ Horizontal menu
+*/
+@media (min-width: 576px) {
+  .menu-toggle,
+  .menu .menu-close__link {
+    display: none;
+  }
+  
+  /* Undo positioning of off-canvas menu */
+  .menu {
+    position: relative;
+    left: auto;
+    top: auto;
+    height: auto;
+  }
+  
+  .nav-body {
+    display: flex;
+    
+    /* Undo off-canvas styling */
+    padding: 0;
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+    height: auto;
+    width: auto;
+    background: none;
+  }
+  
+  .menu a {
+    border: 0 !important; /* Remove borders from off-canvas styling */
+  }
+  
+ 
+}
+
+.search {
+    display:flex;
+}
+
+.search_small {
+    height: 20px;
+}
+
+.search__field {
+    height: 100%;
+    display:flex;
+    padding: 0;
+}
+.search__field_violet-border {
+    border: 1px solid #6D3D99;
+    display:flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.search__btn {
+    display: flex;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    padding: 0 2%
+}
+
+.search__btn_violet {
+    color: white;
+    background-color: #9B51E0;
+    height: 22px;
+    line-height: 22px;
+}
+
+.menu-close__link {
+	text-decoration: none;
+	display: flex;
+	line-height: 20px;
+
+}
+
+.nav-body {
+	text-align: center;
+}
+
+.nav-body__link {
+	text-decoration: none;
+	color: black;
+	display: flex;
+	height: 2rem;
+	line-height: 2rem;
+	justify-content: center;
+}
+
+.nav-body__link:hover {
+	background: #FFC740;
+}
+
+.nav-body__link_active {
+	background: #FFC740;
+	color: white;
+	margin-top: 20px;
+}
+
+ .logo {
+ 	display: flex;
+     position: relative;
+}
+ .logo__square {
+     height: 48px;
+     width: 50px;
+     border: 3px solid #FFC740;
+}
+ .logo__text {
+     position: absolute;
+     height: 26px;
+     min-width: 14px;
+     top: 12px;
+     left: 22px;
+     background: white;
+     font-weight: bold;
+     font-size: 1rem;
+     line-height: 1.8rem;
+     white-space: nowrap;
+}
+
+.menu-toggle {
+	position: fixed;
+	top: 0;
+	right: 0;
+	text-decoration: none;
+	font-size: 3rem;
+	color: #FFC740;
+}
+
+
 
 /* ------------------- big image---------------------------------*/
 
