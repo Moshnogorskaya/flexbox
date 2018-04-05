@@ -59,16 +59,16 @@ input[type="text"]{
 
 
 
-body {
+html {
     font-family: 'Roboto', sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     display: flex;
     flex-direction: column;
     min-width: 320px;
+    font-weight: 100;
 }
 
 
-/* -------------------logo search -------------------*/
 
 
 
@@ -252,7 +252,7 @@ header {
      left: 22px;
      background: white;
      font-weight: bold;
-     font-size: 1rem;
+     font-size: 1.5rem;
      line-height: 1.8rem;
      white-space: nowrap;
 }
@@ -328,6 +328,8 @@ header {
 
 .post__article {
 	text-align: justify;
+	font-size: 0.75rem;
+	line-height: 1.2rem
 }
 
  .post__color-block {
@@ -496,10 +498,20 @@ header {
      color: white;
 	justify-content: center;
 	align-items: center;
+	margin-top: 10px;
 }
  
 
+@media (min-width: 400px) {
+	html {
+		font-size: 16px;
+	}
 
+
+
+
+
+}
 
 
 
