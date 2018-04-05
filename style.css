@@ -171,39 +171,7 @@ header {
  Larger screen styling
  Horizontal menu
 */
-@media (min-width: 576px) {
-  .menu-toggle,
-  .menu .menu-close__link {
-    display: none;
-  }
-  
-  /* Undo positioning of off-canvas menu */
-  .menu {
-    position: relative;
-    left: auto;
-    top: auto;
-    height: auto;
-  }
-  
-  .nav-body {
-    display: flex;
-    
-    /* Undo off-canvas styling */
-    padding: 0;
-    -webkit-box-shadow: none;
-       -moz-box-shadow: none;
-            box-shadow: none;
-    height: auto;
-    width: auto;
-    background: none;
-  }
-  
-  .menu a {
-    border: 0 !important; /* Remove borders from off-canvas styling */
-  }
-  
- 
-}
+
 
 .search {
     display:flex;
@@ -354,7 +322,6 @@ header {
 
 .post {
 	display: flex;
-	align-items: center;
 	flex-direction: column;
 	margin: 1.5rem 1rem 0 1rem;
 } 
@@ -396,6 +363,7 @@ header {
 	padding-bottom: 50%;
 	border: 2px solid white;
 	outline: 2px solid #FFC740;
+	margin: 0 auto;
 }
  .post__image_dog {
      background: url("https://s3-alpha.figma.com/img/6bbb/1a96/54530f2df310195e9e731c151ece672d?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJK6APQGEHTP6I3PA%2F20180328%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180328T115617Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=cd6af598f8b2d11e0daf86630465e95e5d2351c458f05ad134f54e9f7e0dde1e") 40% no-repeat;
@@ -426,7 +394,7 @@ header {
 .news-list-item {
 	display: flex;
 	flex-diirection: row;
-	align-items: flex-start;
+	align-items: start;
 	width: 100%;
 }
 
@@ -434,8 +402,8 @@ header {
 
 .news-list-item__image {
 	display: flex;
-	width: 25%;
-	padding-bottom: 20%;
+	width: 20%;
+	padding-bottom: 15%;
 	border: 1px solid #C4C4C4;
 }
 
@@ -531,3 +499,43 @@ header {
 }
  
 
+
+
+
+
+
+
+
+@media (min-width: 576px) {
+  .menu-toggle,
+  .menu .menu-close__link {
+    display: none;
+  }
+  
+  /* Undo positioning of off-canvas menu */
+  .menu {
+    position: relative;
+    left: auto;
+    top: auto;
+    height: auto;
+  }
+  
+  .nav-body {
+    display: flex;
+    
+    /* Undo off-canvas styling */
+    padding: 0;
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+    height: auto;
+    width: auto;
+    background: none;
+  }
+  
+  .menu a {
+    border: 0 !important; /* Remove borders from off-canvas styling */
+  }
+  
+ 
+}
