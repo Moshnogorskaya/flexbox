@@ -150,7 +150,7 @@ html {
   flex-direction: column;
   min-width: 320px;
   font-weight: 100;
-  max-width: 1260px;
+
 }
 
 html,
@@ -689,6 +689,7 @@ header {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+      max-width: 1260px;
   }
   .logo {
     margin-top: 1rem
