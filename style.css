@@ -150,7 +150,7 @@ html {
   flex-direction: column;
   min-width: 320px;
   font-weight: 100;
-  max-width: 1260px;
+ 
 }
 
 html,
@@ -532,8 +532,15 @@ header {
 
 /*------------------------clients------------------------------*/
 
+.clients {
+    margin: 1rem 1rem 0 1rem;
+
+  }
+
+
 .clients-list {
   display: flex;
+  margin-bottom: 1rem
 }
 
 .clients-list__item {
@@ -570,6 +577,39 @@ header {
   background-size: contain;
 }
 
+/*------------------------video----------------------------------*/
+
+.video {
+    margin: 2rem 1rem 0 1rem;
+  }
+
+
+.video__position {
+  padding: 1rem;
+  margin: 0 auto;
+  max-width:854px;
+}
+
+.video__frame {
+position:relative;
+height:0;
+padding-bottom:56.25%;
+}
+
+.video__content {
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%
+}
+
+
+/*------------------------audio----------------------------------*/
+
+.audio {
+    margin: 2rem 1rem 0 1rem;
+  }
 
 /*------------------------footer----------------------------------*/
 
@@ -689,6 +729,7 @@ header {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    max-width: 1260px; 
   }
   .logo {
     margin-top: 1rem
@@ -754,9 +795,7 @@ header {
     padding-bottom: 15%;
     margin-bottom: 1%;
   }
-  .clients {
-    margin: 0 0.5rem;
-  }
+  
   .footer {
     height: 115px;
   }
