@@ -349,7 +349,14 @@ header {
 .logo {
   display: flex;
   position: relative;
+  animation: pulse 1s infinite;
+  animation-play-state: paused;
 }
+
+.logo:hover {
+  animation-play-state: running;
+}
+
 
 .logo__square {
   height: 48px;
@@ -397,13 +404,23 @@ header {
 
 .big-image__content_blur {
   background-color: rgba(0, 0, 0, 0.38);
+  animation: blink 5s alternate infinite;
 }
+
+@keyframes blink {
+  0% {opacity: 0.5;}
+  100% {opacity: 1;}
+}
+
 
 .big-image__heading {
   font-size: 3rem;
   color: #FFC740;
   font-weight: 300;
+  animation: fadeInLeft 1s 2s backwards;
 }
+
+
 
 .big-image__text {
   line-height: 1rem;
@@ -411,6 +428,7 @@ header {
   font-weight: 100;
   color: white;
   margin-bottom: 1rem;
+  animation: fadeInLeft 1s 3s backwards;
 }
 
 .big-image__btn {
@@ -421,6 +439,7 @@ header {
   padding: 0.5rem;
   font-size: 0.75rem;
   font-weight: 400;
+  animation: fadeInLeft 1s 4s backwards;
 }
 
 
