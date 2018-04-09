@@ -319,6 +319,7 @@ header {
   background-color: #9B51E0;
   height: 22px;
   line-height: 22px;
+  font-weight: bold;
 }
 
 .menu-close__link {
@@ -447,7 +448,7 @@ header {
 
 .post {
   flex-direction: column;
-  margin: 1.5rem 1rem 0 1rem;
+  margin: 1.5rem 1rem 3% 1rem;
 }
 
 .post__article {
@@ -550,6 +551,10 @@ header {
 
 
 /*------------------------clients------------------------------*/
+
+  .clients {
+    margin: 0 1rem;
+  }
 
 .clients-list {
   display: flex;
