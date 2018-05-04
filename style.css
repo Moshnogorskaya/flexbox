@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html,
 body,
 div,
@@ -86,55 +85,8 @@ audio,
 video {
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+  display: flex;
   box-sizing: border-box;
-}
-
-
-/* HTML5 display-role reset for older browsers */
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
 }
 
 input[type="text"] {
@@ -143,10 +95,10 @@ input[type="text"] {
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+
 html {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  display: flex;
   flex-direction: column;
   min-width: 320px;
   font-weight: 100;
@@ -159,12 +111,12 @@ body {
 }
 
 body {
-  display: flex;
   flex-direction: column;
 }
 
 .container-for-sticky-footer {
   flex: 1 0 auto;
+  flex-direction: column;
 }
 
 .footer {
@@ -214,7 +166,6 @@ body {
 }
 
 header {
-  display: flex;
   align-items: baseline;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
@@ -274,9 +225,9 @@ header {
  Horizontal menu
 */
 
-.search {
+/*.search {
   display: flex;
-}
+}*/
 
 .search_big-screen {
   display: none;
@@ -288,19 +239,16 @@ header {
 
 .search__field {
   height: 100%;
-  display: flex;
   padding: 0 0 0 10px;
 }
 
 .search__field_violet-border {
   border: 1px solid #6D3D99;
-  display: flex;
   width: 100%;
   margin-bottom: 20px;
 }
 
 .search__btn {
-  display: flex;
   text-decoration: none;
   padding: 0;
   margin: 0;
@@ -317,14 +265,12 @@ header {
 
 .menu-close__link {
   text-decoration: none;
-  display: flex;
   line-height: 20px;
 }
 
 .xs-nav-body__link {
   text-decoration: none;
   color: black;
-  display: flex;
   height: 2rem;
   line-height: 2rem;
   justify-content: center;
@@ -341,7 +287,6 @@ header {
 }
 
 .logo {
-  display: flex;
   position: relative;
 }
 
@@ -489,7 +434,6 @@ header {
 /* ------------------- services---------------------------------*/
 
 .news-list-item {
-  display: flex;
   align-items: start;
 }
 
@@ -530,16 +474,11 @@ header {
     margin: 0 1rem;
 }
 
-.clients-list {
-  display: flex;
-}
-
 .clients-list__item {
   width: 20%;
 }
 
 .clients-list__image {
-  display: flex;
   padding-bottom: 60%;
 }
 
@@ -572,7 +511,6 @@ header {
 /*------------------------footer----------------------------------*/
 
 .footer {
-  display: flex;
   height: 70px;
   background: #6D3D99;
   color: white;
@@ -640,7 +578,6 @@ header {
     width: 80%
   }
   .post__content {
-    display: flex;
     align-items: start;
   }
   .post__image {
@@ -663,7 +600,6 @@ header {
     width: 60%
   }
   .posts {
-    display: flex;
     flex-wrap: wrap;
   }
   .post_half {
