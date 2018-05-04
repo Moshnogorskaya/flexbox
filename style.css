@@ -470,15 +470,18 @@ body {
 }
 
 .clients-list {
+  margin: 1rem;
   flex-direction: column;
+  justify-content:center;
 }
 
 .clients-list__item {
   flex-direction: column;
+  margin-top: 1rem;
 }
 
 .clients-list__image {
-  height: 50px;
+  height: 80px;
 }
 
 .clients-list__image_html5 {
@@ -510,7 +513,7 @@ body {
 /*------------------------footer----------------------------------*/
 
 .footer {
-  height: 70px;
+  height: 100px;
   background: #6D3D99;
   color: white;
   justify-content: center;
@@ -525,6 +528,7 @@ body {
   html {
     font-size: 18px;
   }
+}
 
 @media (min-width: 576px) {
   .menu-toggle,
@@ -593,7 +597,6 @@ body {
     width: 10%;
     padding-bottom: 10%;
   }
-}
 
 .clients-list {
   flex-direction: row;
@@ -605,25 +608,47 @@ body {
   flex-grow: 1;
 }
 
+}
+
 @media (min-width: 768px) {
   .big-image__heading {
     width: 70%;
+    margin-bottom: 1rem;
   }
   .big-image__text {
-    width: 60%
+    width: 60%;
   }
+
+  .big-image {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
   .posts {
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .post {
+    margin: 1rem 0;
   }
   .post_half {
-    width: 45%;
+    width: 45.5%;
   }
   .post_third {
-    width: 28.5%;
+    width: 29.5%;
+  }
+
+  .post__image {
+    padding: 15%;
+    margin-top: 1rem;
+    margin-left: 2px;
   }
   .news-list-item__image {
-    width: 30%;
+    width: 40%;
     padding-bottom: 20%;
+    margin-top: 0.2rem;
   }
   .news-list-item__paragraph {
     text-align: left;
@@ -639,13 +664,13 @@ body {
       max-width: 1260px;
   }
   .logo {
-    margin-top: 1rem
+    margin-top: 1rem;
   }
   .search_big-screen {
     height: 30px;
     width: 11rem;
     font-size: 0.7rem;
-    margin-top: 1rem
+    margin-top: 1rem;
   }
   .search__btn_violet {
     height: 32px;
@@ -658,57 +683,27 @@ body {
     line-height: 2.2rem;
     font-size: 0.8rem;
   }
-  .sm-nav-body__link_active {
-    font-weight: 400;
-  }
   .big-image__heading {
     font-size: 3.3rem;
     font-weight: 300;
     line-height: 4rem;
-    width: 60%;
   }
   .big-image__text {
     width: 50%;
-    margin-top: 0.5rem
+    margin-top: 0.5rem;
   }
   .big-image {
-    margin-top: 0.5rem;
     margin-bottom: 1.5rem;
   }
-  .posts {
-    justify-content: space-between;
-  }
-  .post {
-    margin: 0.5rem 0.5rem 3% 0.5rem;
-  }
-  .post_half {
-    width: 47.6%
-  }
-  .post__image {
-    padding: 15%;
-    margin-top: 0;
-  }
+  
   .post__article {
     font-size: 0.6rem;
     line-height: 0.8rem;
-    margin-top: 0;
     font-weight: 400;
   }
-  .post_third {
-    width: 30.9%
-  }
+
   .news-list-item__image {
-    width: 15%;
+    width: 20%;
     padding-bottom: 15%;
-    margin-bottom: 1%;
-  }
-  .clients {
-    margin: 0 0.5rem;
-  }
-  .footer {
-    height: 115px;
-  }
-  .post__paragraph {
-    margin-bottom: 1rem;
   }
 }
