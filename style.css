@@ -200,10 +200,6 @@ body {
 
 .xs-nav-body {
   list-style: none;
-  /* Hide shadow w/-8px while 'closed' */
-  -webkit-box-shadow: -8px 0 8px rgba(0, 0, 0, .5);
-  -moz-box-shadow: -8px 0 8px rgba(0, 0, 0, .5);
-  box-shadow: -8px 0 8px rgba(0, 0, 0, .5);
   min-height: 100%;
   background: white;
   padding-top: 70px;
@@ -232,9 +228,6 @@ header {
 .menu:target {
   right: 0;
   outline: none;
-  -moz-box-shadow: 3px 0 12px rgba(0, 0, 0, .25);
-  -webkit-box-shadow: 3px 0 12px rgba(0, 0, 0, .25);
-  box-shadow: 3px 0 12px rgba(0, 0, 0, .25);
 }
 
 .menu:target .menu-close__link {
