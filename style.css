@@ -102,7 +102,6 @@ html {
   flex-direction: column;
   min-width: 320px;
   font-weight: 100;
-
 }
 
 html,
@@ -131,30 +130,25 @@ body {
 
 /* -------------------menu ----------------------------------*/
 
-
-/*
- Default styles + Mobile first
- Offscreen menu style
-*/
-
 .menu {
   position: absolute;
-  width: 200px;
-  right: -200px;
-  top: 0;
-  height: 100%;
-  overflow-y: scroll;
-  overflow-x: visible;
-  transition: right 0.3s ease, box-shadow 0.3s ease;
+  display: none;
+  right: 0;
+  top: 4px;
   z-index: 999;
-  margin-top: -16px;
+  flex-direction: column;
 }
 
 .xs-nav-body {
   list-style: none;
   min-height: 100%;
   background: white;
-  padding-top: 70px;
+  padding: 70px 2px 0 2px;;
+  flex-direction: column;
+}
+
+.xs-nav-body__item {
+  flex-direction: column;
 }
 
 .menu-close__link {
@@ -165,41 +159,27 @@ body {
   color: #FFC740;
 }
 
-header {
-  align-items: baseline;
+.header {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
 
 
 /*
- On small devices, allow it to toggle...
+ On small devices allow it to toggle
 */
 
 .menu:target {
-  right: 0;
-  outline: none;
+  display: flex;
 }
 
 .menu:target .menu-close__link {
   z-index: 1001;
 }
 
-.menu:target .xs-nav-body {
-  position: relative;
-  z-index: 1000;
-}
-
-
-/* 
- We could us `.main-menu:target:after`, but
- it wouldn't be clickable.
-*/
 
 .menu:target+.backdrop {
   position: absolute;
-  display: block;
-  content: "";
   left: 0;
   top: 0;
   width: 100%;
@@ -219,15 +199,6 @@ header {
   display: none;
 }
 
-
-/*
- Larger screen styling
- Horizontal menu
-*/
-
-/*.search {
-  display: flex;
-}*/
 
 .search_big-screen {
   display: none;
@@ -311,7 +282,7 @@ header {
 
 .menu-toggle {
   position: fixed;
-  top: 1rem;
+  top: 0.3rem;
   right: 0;
   text-decoration: none;
   font-size: 3rem;
@@ -332,6 +303,7 @@ header {
 .big-image__content {
   min-height: 332px;
   padding: 1.5rem;
+  flex-direction: column;
 }
 
 .big-image__content_blur {
@@ -360,10 +332,18 @@ header {
   padding: 0.5rem;
   font-size: 0.75rem;
   font-weight: 400;
+  width: 6rem;
+  border-radius: 4px;
+  justify-content: center;
 }
 
 
 /* ------------------- posts---------------------------------*/
+
+.posts {
+  flex-direction: column;
+}
+
 
 .post {
   flex-direction: column;
@@ -374,12 +354,11 @@ header {
   text-align: justify;
   font-size: 0.75rem;
   line-height: 1.2rem;
-  margin-top: 1rem;
+  flex-direction: column;
 }
 
 .post__color-block {
-  padding-left: 1rem;
-  margin-bottom: 1rem;
+  padding-left: 1.2rem;
 }
 
 .post__color-block_violet {
@@ -391,11 +370,20 @@ header {
 }
 
 .post__heading {
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   background: white;
   letter-spacing: -0.06rem;
   font-weight: 700;
-  padding: 0.3rem;
+  padding: 0.1rem 0.3rem;
+}
+
+.post__content {
+  flex-direction: column;
+  align-items: center;
+}
+
+.post__paragraph {
+  margin-top: 1rem;
 }
 
 .post__link {
@@ -407,7 +395,7 @@ header {
   padding-bottom: 50%;
   border: 2px solid white;
   outline: 2px solid #FFC740;
-  margin: 0 auto;
+  margin-top: 1rem;
 }
 
 .post__image_dog {
@@ -433,13 +421,18 @@ header {
 
 /* ------------------- services---------------------------------*/
 
+.news-list {
+  margin-top: 1rem;
+}
+
 .news-list-item {
-  align-items: start;
+  margin-bottom: 0.5rem;
 }
 
 .news-list-item__image {
-  width: 20%;
-  padding-bottom: 15%;
+  width: 33%;
+  height: 0;
+  padding-bottom: 25%;
   border: 1px solid #C4C4C4;
 }
 
@@ -461,25 +454,31 @@ header {
 .news-list-item__text {
   margin-left: 0.5rem;
   margin-bottom: 0.5rem;
-}
-
-.news-list-item__heading {
-  margin: 0;
+  flex-direction: column;
 }
 
 
 /*------------------------clients------------------------------*/
 
+.container {
+  flex-direction: column;
+}
+
 .clients {
-    margin: 0 1rem;
+    margin: 1rem;
+    flex-direction: column;
+}
+
+.clients-list {
+  flex-direction: column;
 }
 
 .clients-list__item {
-  width: 20%;
+  flex-direction: column;
 }
 
 .clients-list__image {
-  padding-bottom: 60%;
+  height: 50px;
 }
 
 .clients-list__image_html5 {
@@ -493,7 +492,7 @@ header {
 }
 
 .clients-list__image_node {
-  background: url("https://s3-alpha.figma.com/img/7c87/0321/0b43c4cfa1519dd01d96146bde7d46e8?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJK6APQGEHTP6I3PA%2F20180328%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180328T135410Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=4e49c96e278c3c0072b3c1eef9f4263994ae3af239b9fc28d8e2100c3f7948c1") 30% 50% no-repeat;
+  background: url("https://s3-alpha.figma.com/img/7c87/0321/0b43c4cfa1519dd01d96146bde7d46e8?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJK6APQGEHTP6I3PA%2F20180328%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180328T135410Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=4e49c96e278c3c0072b3c1eef9f4263994ae3af239b9fc28d8e2100c3f7948c1") center no-repeat;
   background-size: contain;
 }
 
@@ -503,7 +502,7 @@ header {
 }
 
 .clients-list__image_sql {
-  background: url("https://s3-alpha.figma.com/img/4922/f02b/482433322c61675a9780b9999a2c64a4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJK6APQGEHTP6I3PA%2F20180328%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180328T135500Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=b05b51521c23dcdd3ad2a4c42163a40760dca3704d1809110c837d667eafb93b") 50% 30% no-repeat;
+  background: url("https://s3-alpha.figma.com/img/4922/f02b/482433322c61675a9780b9999a2c64a4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJK6APQGEHTP6I3PA%2F20180328%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180328T135500Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=b05b51521c23dcdd3ad2a4c42163a40760dca3704d1809110c837d667eafb93b") center no-repeat;
   background-size: contain;
 }
 
@@ -520,7 +519,9 @@ header {
   font-size: 0.75rem
 }
 
-@media (min-width: 400px) {
+/*------------------------media queries----------------------------------*/
+
+@meia (min-width: 400px) {
   html {
     font-size: 18px;
   }
@@ -545,7 +546,7 @@ header {
     font-size: 0.875rem;
     align-self: center;
   }
-  header {
+  .header {
     display: flex;
     justify-content: space-between;
   }
