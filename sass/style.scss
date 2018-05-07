@@ -1,0 +1,19 @@
+// Color
+$bright:#FFC740;
+$contrast:#9B51E0;
+$dark:#6D3D99;
+$base:white;
+
+// Init
+@import 'init/reset';
+@import 'init/init';
+
+// Header
+@import 'header/progressbar';
+@import 'header/header';
+@import 'header/menu';
+
+// Main
+@import 'main/big_image'
+
+

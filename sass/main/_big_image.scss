@@ -1,0 +1,38 @@
+.big-image {
+  min-height: 332px;
+  background: url("https://s3-alpha.figma.com/img/2a16/4a66/f8b1a52173c4744df41e2f05da64bc9e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJK6APQGEHTP6I3PA%2F20180328%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180328T082822Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=33f10a08929c2417b831bb90d851d66b32cf04edd13bc9917a808741a21a33f0")
+    50% 80% no-repeat;
+  background-size: cover;
+  .big-image__content {
+    min-height: 332px;
+    padding: 1.5rem;
+    flex-direction: column;
+    .big-image__content_blur {
+      background-color: rgba(0, 0, 0, 0.38);
+    }
+    .big-image__heading {
+      font-size: 3rem;
+      color: $bright;
+      font-weight: 300;
+    }
+    .big-image__text {
+      line-height: 1rem;
+      font-size: 0.75rem;
+      font-weight: 100;
+      color: $base;
+      margin-bottom: 1rem;
+    }
+    .big-image__btn {
+      background: $dark;
+      border: none;
+      color: $base;
+      text-decoration: none;
+      padding: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 400;
+      width: 6rem;
+      border-radius: 4px;
+      justify-content: center;
+    }
+  }
+}
