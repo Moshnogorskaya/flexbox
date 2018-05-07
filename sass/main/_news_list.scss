@@ -1,8 +1,8 @@
 .news-list {
   margin-top: 1rem;
-  .news-list-item {
+  &-item {
     margin-bottom: 0.5rem;
-    .news-list-item__image {
+    &__image {
       width: 33%;
       height: 0;
       padding-bottom: 25%;
@@ -20,24 +20,23 @@
         width: 20%;
         padding-bottom: 15%;
       }
-      }
-      .news-list-item__image_car {
+      &_car {
         background: url("https://s3-alpha.figma.com/img/e18f/27bb/9639cbd019b8a0032d825590d431db07?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJK6APQGEHTP6I3PA%2F20180328%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180328T132953Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=030d7473f631764d270080102bcf0eadac3273700f12b994643f15286af382f9")
           20% 0 no-repeat;
         background-size: cover;
       }
-      .news-list-item__image_phone {
+      &_phone {
         background: url("https://s3-alpha.figma.com/img/fd2c/b7a8/bda7499d07d29ee08b52588939e2c703?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJK6APQGEHTP6I3PA%2F20180328%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180328T133914Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=78de7298d31c0b4c6b5088898c7da043e0d98fcf2f7493819b3737f94fbf604c")
           50% 0 no-repeat;
         background-size: cover;
       }
-      .news-list-item__image_bbc {
+      &_bbc {
         background: url("https://s3-alpha.figma.com/img/c26e/f401/11ee000b1576c1c889a015f6886a4451?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJK6APQGEHTP6I3PA%2F20180328%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180328T134135Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=374e413f62972f540e0417bb6419ce18801b133b4a8a98ec4be17dafcd794b19")
           50% 0 no-repeat;
         background-size: cover;
       }
     }
-    .news-list-item__text {
+    &__text {
       margin-left: 0.5rem;
       margin-bottom: 0.5rem;
       flex-direction: column;
@@ -49,3 +48,4 @@
       }
     }
   }
+}
