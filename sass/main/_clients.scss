@@ -5,9 +5,17 @@
     margin: 1rem;
     flex-direction: column;
     justify-content: center;
+    @media (min-width: 576px) {
+      flex-direction: row;
+      margin-top: 1rem;
+    }
     .clients-list__item {
       flex-direction: column;
       margin-top: 1rem;
+      @media (min-width: 576px) {
+        flex-direction: column;
+        flex-grow: 1;
+      }
       .clients-list__image {
         height: 80px;
         .clients-list__image_html5 {
