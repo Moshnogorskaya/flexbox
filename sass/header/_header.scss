@@ -1,14 +1,30 @@
 .header {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
+  @media (min-width: 576px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .menu,
+    .menu-toggle,
+    .menu .menu-close__link {
+      display: none;
+    }
+  }
   .logo {
     position: relative;
-    .logo__square {
+    @media (min-width: 576px) {
+      flex-grow: 1;
+    }
+    @media (min-width: 850px) {
+      margin-top: 1rem;
+    }
+    &__square {
       height: 48px;
       width: 50px;
       border: 3px solid $bright;
     }
-    .logo__text {
+    &__text {
       position: absolute;
       height: 26px;
       min-width: 14px;
@@ -23,26 +39,44 @@
   }
   .search_big-screen {
     display: none;
-    .search__field {
-      height: 100%;
-      padding: 0 0 0 10px;
-      .search__field_violet-border {
-        border: 1px solid $dark;
-        width: 100%;
-        margin-bottom: 20px;
+    @media (min-width: 576px) {
+      display: flex;
+      height: 20px;
+      width: 9rem;
+      font-size: 0.875rem;
+      .search__field {
+        height: 100%;
+        padding: 0 0 0 10px;
+        &_violet-border {
+          border: 1px solid $dark;
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+      .search__btn {
+        text-decoration: none;
+        padding: 0;
+        margin: 0;
+        padding: 0 2%;
+        &_violet {
+          color: $base;
+          font-weight: bold !important;
+          background-color: $contrast;
+          height: 22px;
+          line-height: 22px;
+        }
       }
     }
-    .search__btn {
-      text-decoration: none;
-      padding: 0;
-      margin: 0;
-      padding: 0 2%;
+    @media (min-width: 850px) {
+      height: 30px;
+      width: 11rem;
+      font-size: 0.7rem;
+      margin-top: 1rem;
       .search__btn_violet {
-        color: $base;
-        font-weight: bold !important;
-        background-color: $contrast;
-        height: 22px;
-        line-height: 22px;
+        height: 32px;
+        line-height: 32px;
+        font-weight: 400;
+        padding: 0 0.5rem;
       }
     }
   }
@@ -60,7 +94,7 @@
     position: absolute;
     display: none;
     right: 0;
-    top: 4px;
+    top: 0;
     z-index: 999;
     flex-direction: column;
     &:target {
@@ -92,10 +126,32 @@
         background: $base;
         padding: 70px 2px 0 2px;
         flex-direction: column;
-        .xs-nav-body__item {
+        &__item {
           flex-direction: column;
           .search_small-screen {
             height: 20px;
+            .search__field {
+              height: 100%;
+              padding: 0 0 0 10px;
+            }
+            .search__field_violet-border {
+              border: 1px solid #6d3d99;
+              width: 100%;
+              margin-bottom: 20px;
+            }
+            .search__btn {
+              text-decoration: none;
+              padding: 0;
+              margin: 0;
+              padding: 0 2%;
+            }
+            .search__btn_violet {
+              color: white;
+              font-weight: bold !important;
+              background-color: #9b51e0;
+              height: 22px;
+              line-height: 22px;
+            }
           }
           .xs-nav-body__link {
             text-decoration: none;
@@ -103,15 +159,16 @@
             height: 2rem;
             line-height: 2rem;
             justify-content: center;
-            .xs-nav-body__link:hover {
+            &:hover {
               background: $bright;
             }
-            .xs-nav-body__link_active {
+            &_active {
               background: $bright;
               color: $base;
               margin-top: 20px;
             }
           }
+          
         }
       }
     }
@@ -122,44 +179,5 @@
   .menu,
   .menu:target + .backdrop {
     position: fixed;
-  }
-}
-@media (min-width: 576px) {
-  .header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    .logo {
-      flex-grow: 1;
-    }
-    .search_big-screen {
-      display: flex;
-      height: 20px;
-      width: 9rem;
-      font-size: 0.875rem;
-    }
-    .menu,
-    .menu-toggle,
-    .menu .menu-close__link {
-      display: none;
-    }
-  }
-}
-
-@media (min-width: 850px) {
-  .logo {
-    margin-top: 1rem;
-  }
-  .search_big-screen {
-    height: 30px;
-    width: 11rem;
-    font-size: 0.7rem;
-    margin-top: 1rem;
-    .search__btn_violet {
-      height: 32px;
-      line-height: 32px;
-      font-weight: 400;
-      padding: 0 0.5rem;
-    }
   }
 }
