@@ -1,0 +1,51 @@
+.clients {
+  flex-direction: column;
+  @media (min-width: 768px) {
+    padding: 0 2.5%;
+  }
+  &-list {
+    margin: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    @media (min-width: 576px) {
+      flex-direction: row;
+      margin-top: 1rem;
+    }
+    &__item {
+      flex-direction: column;
+      margin-top: 1rem;
+      @media (min-width: 576px) {
+        flex-direction: column;
+        flex-grow: 1;
+      }
+      .clients-list__image {
+        height: 80px;
+        &_html5 {
+          background: url("https://s3-alpha.figma.com/img/485e/67c9/970732fd3a404f5f29a19596a667236b?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJK6APQGEHTP6I3PA%2F20180328%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180328T134826Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=e87cebb40168caa445a482e4e3baa47e161b4920c1695536a1601350518ea99a")
+            center no-repeat;
+          background-size: contain;
+        }
+        &_html3 {
+          background: url("https://s3-alpha.figma.com/img/f6f3/150d/a2cd775dea45593bff9861a4ff221c93?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJK6APQGEHTP6I3PA%2F20180328%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180328T135333Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=2d9413bbcbae68cb13bd4c3cbec0ad942093c80a19030464522a7eb9e143406b")
+            center no-repeat;
+          background-size: contain;
+        }
+        &_node {
+          background: url("https://s3-alpha.figma.com/img/7c87/0321/0b43c4cfa1519dd01d96146bde7d46e8?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJK6APQGEHTP6I3PA%2F20180328%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180328T135410Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=4e49c96e278c3c0072b3c1eef9f4263994ae3af239b9fc28d8e2100c3f7948c1")
+            center no-repeat;
+          background-size: contain;
+        }
+        &_php {
+          background: url("https://s3-alpha.figma.com/img/ad52/d1a3/2cd1b02c3ba5558a6bc24e5a0e95bfbc?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJK6APQGEHTP6I3PA%2F20180328%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180328T135435Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=5bdbdaf454baa8565fb68510d3040344aed89e7ce7b6d28482e0692f862ce683")
+            center no-repeat;
+          background-size: contain;
+        }
+        &_sql {
+          background: url("https://s3-alpha.figma.com/img/4922/f02b/482433322c61675a9780b9999a2c64a4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJK6APQGEHTP6I3PA%2F20180328%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180328T135500Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=b05b51521c23dcdd3ad2a4c42163a40760dca3704d1809110c837d667eafb93b")
+            center no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}
