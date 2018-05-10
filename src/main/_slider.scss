@@ -1,0 +1,39 @@
+.slider {
+  position: relative;
+  min-height: 332px;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  @media (min-width: 850px) {
+    margin-bottom: 1.5rem;
+  }
+  &__slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s;
+    &:nth-child(1) {
+      background: url(https://www.planwallpaper.com/static/images/4-Nature-Wallpapers-2014-1_cDEviqY.jpg);
+      background-size: cover;
+    }
+    &:nth-child(2) {
+      background: url(https://www.planwallpaper.com/static/images/colorful-nature-wallpaper.jpg);
+      background-size: cover;
+    }
+    &:nth-child(3) {
+      background: url(https://www.planwallpaper.com/static/images/Blue-Green-beautiful-nature-21891805-1920-1200.jpg)
+      center;
+      background-size: cover;
+    }
+  }
+  .showing {
+    opacity: 1;
+    z-index: 2;
+  }
+}
