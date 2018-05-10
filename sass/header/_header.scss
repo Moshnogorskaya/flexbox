@@ -128,9 +128,12 @@
         flex-direction: column;
         &__item {
           flex-direction: column;
-          .search_small-screen {
-            height: 20px;
-            .search__field {
+          .search {
+            &_small-screen {
+              height: 20px;
+            }
+
+            &__field {
               height: 100%;
               padding: 0 0 0 10px;
               &_violet-border {
@@ -138,8 +141,8 @@
                 width: 100%;
                 margin-bottom: 20px;
               }
-            }            
-            .search__btn {
+            }
+            &__btn {
               text-decoration: none;
               padding: 0;
               margin: 0;
@@ -152,24 +155,23 @@
                 line-height: 22px;
               }
             }
-            }
-            
-          .xs-nav-body__link {
-            text-decoration: none;
-            color: black;
-            height: 2rem;
-            line-height: 2rem;
-            justify-content: center;
-            &:hover {
-              background: $bright;
-            }
-            &_active {
-              background: $bright;
-              color: $base;
-              margin-top: 20px;
-            }
           }
-          
+        }
+
+        .xs-nav-body__link {
+          text-decoration: none;
+          color: black;
+          height: 2rem;
+          line-height: 2rem;
+          justify-content: center;
+          &:hover {
+            background: $bright;
+          }
+          &_active {
+            background: $bright;
+            color: $base;
+            margin-top: 20px;
+          }
         }
       }
     }

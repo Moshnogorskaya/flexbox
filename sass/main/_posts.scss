@@ -23,84 +23,85 @@
     }
     &__color-block {
       padding-left: 1.2rem;
-      .post__heading {
-        font-size: 0.75rem;
-        background: $base;
-        letter-spacing: -0.06rem;
-        font-weight: 700;
-        padding: 0.1rem 0.3rem;
-      }
-      &_violet {
-        background: $contrast;
-      }
-      &_yellow {
-        background: $bright;
-      }
     }
 
-    &__content {
-      flex-direction: column;
-      align-items: center;
-      @media (min-width: 576px) {
-        flex-direction: row;
-        align-items: start;
-      }
-      .post__image {
-        width: 50%;
-        padding-bottom: 50%;
-        border: 2px solid $base;
-        outline: 2px solid $bright;
-        margin-top: 1rem;
-        @media (min-width: 576px) {
-          width: 10%;
-          padding: 10%;
-          margin-right: 3%;
-          margin-top: 1.1rem;
-        }
-        @media (min-width: 768px) {
-          padding: 15%;
-          margin-top: 1rem;
-          margin-left: 2px;
-        }
-        &_dog {
-          background: url("https://s3-alpha.figma.com/img/6bbb/1a96/54530f2df310195e9e731c151ece672d?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJK6APQGEHTP6I3PA%2F20180328%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180328T115617Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=cd6af598f8b2d11e0daf86630465e95e5d2351c458f05ad134f54e9f7e0dde1e")
-            40% no-repeat;
-          background-size: 120%;
-        }
-        &_jobs {
-          background: url("https://s3-alpha.figma.com/img/12b2/f0ee/cac5074b0c0cc90f9c27125fe47221e3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJK6APQGEHTP6I3PA%2F20180328%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180328T124525Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=24828ff5fdf021a4e53b4bf2894f772d123d17005f91931cada7e4c3c07f34aa")
-            40% 0 no-repeat;
-          background-size: 190%;
-        }
-        &_lemur {
-          background: url("https://s3-alpha.figma.com/img/a713/469c/25d71a72cabca78095afe561961c06f3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJK6APQGEHTP6I3PA%2F20180328%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180328T124846Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=f3f9146036d1bb56bfafea9c8982381fc94459c15cd40c6da6db236fc798fc7b")
-            40% 0 no-repeat;
-          background-size: 120%;
-        }
-        &_girl {
-          background: url("https://s3-alpha.figma.com/img/26c8/c86d/fc8ea0be2acb6ce33c1f6099a60fcda6?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJK6APQGEHTP6I3PA%2F20180328%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180328T124953Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=36b6c3b9a844184393e2664839d976ecf0a02f6bffe297f98ecc8abf2f89a40a")
-            30% 0 no-repeat;
-          background-size: 150%;
-        }
-      }
-
-      .post__article {
-        text-align: justify;
-        font-size: 0.75rem;
-        line-height: 1.2rem;
-        flex-direction: column;
-        @media (min-width: 850px) {
-          font-size: 0.6rem;
-          line-height: 0.8rem;
-          font-weight: 400;
-        }
-        .post__paragraph {
-          margin-top: 1rem;
-          .post__link {
-            color: black;
-          }
-        }
-      }
+    &_violet {
+      background: $contrast;
     }
+    &_yellow {
+      background: $bright;
+    }
+    &__heading {
+      font-size: 0.75rem;
+      background: $base;
+      letter-spacing: -0.06rem;
+      font-weight: 700;
+      padding: 0.1rem 0.3rem;
+    }
+  }
+
+  &__content {
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 576px) {
+      flex-direction: row;
+      align-items: start;
+    }
+  }
+  &__image {
+    width: 50%;
+    padding-bottom: 50%;
+    border: 2px solid $base;
+    outline: 2px solid $bright;
+    margin-top: 1rem;
+    @media (min-width: 576px) {
+      width: 10%;
+      padding: 10%;
+      margin-right: 3%;
+      margin-top: 1.1rem;
+    }
+    @media (min-width: 768px) {
+      padding: 15%;
+      margin-top: 1rem;
+      margin-left: 2px;
+    }
+    &_dog {
+      background: url("https://s3-alpha.figma.com/img/6bbb/1a96/54530f2df310195e9e731c151ece672d?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJK6APQGEHTP6I3PA%2F20180328%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180328T115617Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=cd6af598f8b2d11e0daf86630465e95e5d2351c458f05ad134f54e9f7e0dde1e")
+        40% no-repeat;
+      background-size: 120%;
+    }
+    &_jobs {
+      background: url("https://s3-alpha.figma.com/img/12b2/f0ee/cac5074b0c0cc90f9c27125fe47221e3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJK6APQGEHTP6I3PA%2F20180328%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180328T124525Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=24828ff5fdf021a4e53b4bf2894f772d123d17005f91931cada7e4c3c07f34aa")
+        40% 0 no-repeat;
+      background-size: 190%;
+    }
+    &_lemur {
+      background: url("https://s3-alpha.figma.com/img/a713/469c/25d71a72cabca78095afe561961c06f3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJK6APQGEHTP6I3PA%2F20180328%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180328T124846Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=f3f9146036d1bb56bfafea9c8982381fc94459c15cd40c6da6db236fc798fc7b")
+        40% 0 no-repeat;
+      background-size: 120%;
+    }
+    &_girl {
+      background: url("https://s3-alpha.figma.com/img/26c8/c86d/fc8ea0be2acb6ce33c1f6099a60fcda6?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJK6APQGEHTP6I3PA%2F20180328%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180328T124953Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=36b6c3b9a844184393e2664839d976ecf0a02f6bffe297f98ecc8abf2f89a40a")
+        30% 0 no-repeat;
+      background-size: 150%;
+    }
+  }
+
+  &__article {
+    text-align: justify;
+    font-size: 0.75rem;
+    line-height: 1.2rem;
+    flex-direction: column;
+    @media (min-width: 850px) {
+      font-size: 0.6rem;
+      line-height: 0.8rem;
+      font-weight: 400;
+    }
+  }
+  &__paragraph {
+    margin-top: 1rem;
+  }
+  &__link {
+    color: black;
   }
 }
