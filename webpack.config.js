@@ -9,10 +9,6 @@ module.exports = {
     contentBase: "./dist",
     stats: "errors-only"
   },
-  output: {
-    filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist")
-  },
   module: {
     rules: [
       {
