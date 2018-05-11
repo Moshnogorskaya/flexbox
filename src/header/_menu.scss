@@ -1,0 +1,31 @@
+.sm-nav-body {
+  display: none;
+  @media (min-width: 576px) {
+    display: flex;
+    font-size: 0.6rem;
+    flex-direction: row;
+    &__link {
+      display: flex;
+      text-decoration: none;
+      color: black;
+      width: 12.5%;
+      justify-content: center;
+      margin-bottom: 10px;
+      height: 2.2rem;
+      line-height: 2.2rem;
+      font-size: 0.6rem;
+      @media (min-width: 850px) {
+        height: 2.2rem;
+        line-height: 2.2rem;
+        font-size: 0.8rem;
+      }
+      &:hover {
+        background: $bright;
+      }
+      &_active {
+        background: $bright;
+        color: $base;
+      }
+    }
+  }
+}
