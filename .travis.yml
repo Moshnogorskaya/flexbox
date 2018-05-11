@@ -1,8 +1,18 @@
 language: node_js
 node_js:
   - "8.11.1"
+  branches:
+  only:
+  - ci
 skip_cleanup: true
 install:
-  - npm i
+  - git checkout ci
 script:
   - npm start
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  on:
+    branch: ci
