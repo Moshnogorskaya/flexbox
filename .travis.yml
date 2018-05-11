@@ -8,10 +8,9 @@ script:
 branches:
   only:
   - ci
-  - gh-pages
 deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GH_TOKEN # Set in the settings page of your repository, as a secure variable
   on:
-    branch: ci
+    branch: gh-pages
