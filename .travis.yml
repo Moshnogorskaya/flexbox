@@ -5,6 +5,9 @@ install:
   - npm i
 script:
   - npm start
+branches:
+  only:
+  - ci
 deploy:
   provider: pages
   skip-cleanup: true
