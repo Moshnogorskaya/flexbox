@@ -8,6 +8,7 @@ script:
 branches:
   only:
   - ci
+  - gh-pages
 deploy:
   provider: pages
   skip-cleanup: true
