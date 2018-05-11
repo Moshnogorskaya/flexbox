@@ -1,4 +1,4 @@
-const path = require('path');
+// const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -6,7 +6,7 @@ module.exports = {
     app: './src/index.js',
   },
   output: {
-    path: `${__dirname}/static`,
+    path: `${__dirname}/`,
     filename: 'bundle.js',
   },
   devServer: {
