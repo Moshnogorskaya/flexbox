@@ -6,7 +6,7 @@ node_js:
   - ci
 skip_cleanup: true
 install:
-  - git checkout ci
+  - npm i
 script:
   - npm start
 deploy:
