@@ -575,7 +575,7 @@ header {
   display: flex;
   height: 70px;
   background: #6D3D99;
-  color: white;
+  color: red;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
