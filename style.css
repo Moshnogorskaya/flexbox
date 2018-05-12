@@ -344,10 +344,13 @@ body {
   flex-direction: column;
 }
 
-
 .post {
   flex-direction: column;
   margin: 1.5rem 1rem 3% 1rem;
+}
+
+.post_half {
+display: none;
 }
 
 .post__article {
