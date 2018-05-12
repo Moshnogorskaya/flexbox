@@ -1,4 +1,5 @@
-let makeBlocks = function generateBlocksWithDataFromExtSource(paras) {
+let makeBlocks = function generateBlocksWithDataFromExtSource(paras=4) {
+  if (paras < 0 || paras > 5) paras = 0;
   const postTemplate = document.querySelector(".post_half");
   const postContainer = document.querySelector(".posts");
 
@@ -13,7 +14,7 @@ let makeBlocks = function generateBlocksWithDataFromExtSource(paras) {
 
       for (let i = 0; i < paras; i += 1) {
         let dupPost = postTemplate.cloneNode(true);
-        let textPlaceholder = dupPost.querySelector('.post__main-text');
+        let textPlaceholder = dupPost.querySelector(".post__main-text");
         textPlaceholder.innerHTML = extPage[i];
         dupPost.style.display = "flex";
         postContainer.insertBefore(dupPost, null);
@@ -22,4 +23,4 @@ let makeBlocks = function generateBlocksWithDataFromExtSource(paras) {
   };
 };
 
-makeBlocks(3);
+makeBlocks();
