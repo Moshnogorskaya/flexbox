@@ -10,13 +10,10 @@
   @media (min-width: 850px) {
     margin-bottom: 1.5rem;
   }
-  &__content {
+  .big-image__content {
     min-height: 332px;
     padding: 1.5rem;
     flex-direction: column;
-    &_blur {
-      background-color: rgba(0, 0, 0, 0.38);
-    }
     .big-image__heading {
       font-size: 3rem;
       color: $bright;
@@ -64,5 +61,7 @@
       justify-content: center;
     }
   }
-        
+  .big-image__content_blur {
+    background-color: rgba(0, 0, 0, 0.38);
+  }      
 }

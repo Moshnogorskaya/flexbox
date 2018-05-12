@@ -4,7 +4,7 @@
     display: flex;
     font-size: 0.6rem;
     flex-direction: row;
-    &__link {
+    .sm-nav-body__link {
       display: flex;
       text-decoration: none;
       color: black;
@@ -19,13 +19,14 @@
         line-height: 2.2rem;
         font-size: 0.8rem;
       }
-      &:hover {
-        background: $bright;
-      }
-      &_active {
-        background: $bright;
-        color: $base;
-      }
+      
+    }
+    .sm-nav-body__link:hover {
+      background: $bright;
+    }
+    .sm-nav-body__link_active {
+      background: $bright;
+      color: $base;
     }
   }
 }
