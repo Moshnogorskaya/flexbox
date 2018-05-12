@@ -19,14 +19,13 @@
         line-height: 2.2rem;
         font-size: 0.8rem;
       }
-      
-    }
-    .sm-nav-body__link:hover {
-      background: $bright;
-    }
-    .sm-nav-body__link_active {
-      background: $bright;
-      color: $base;
+      .sm-nav-body__link:hover {
+        background: $bright;
+      }
+      .sm-nav-body__link_active {
+        background: $bright;
+        color: $base;
+      }
     }
   }
 }

@@ -14,6 +14,9 @@
     min-height: 332px;
     padding: 1.5rem;
     flex-direction: column;
+    .big-image__content_blur {
+      background-color: rgba(0, 0, 0, 0.38);
+    }
     .big-image__heading {
       font-size: 3rem;
       color: $bright;
@@ -61,7 +64,4 @@
       justify-content: center;
     }
   }
-  .big-image__content_blur {
-    background-color: rgba(0, 0, 0, 0.38);
-  }      
 }
