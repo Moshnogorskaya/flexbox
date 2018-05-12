@@ -321,49 +321,49 @@ body {
     flex-direction: column; }
     .big-image__content_blur {
       background-color: rgba(0, 0, 0, 0.38); }
-  .big-image__heading {
-    font-size: 3rem;
-    color: #ffc740;
-    font-weight: 300; }
-    @media (min-width: 576px) {
-      .big-image__heading {
-        width: 80%; } }
-    @media (min-width: 768px) {
-      .big-image__heading {
-        width: 70%;
-        margin-bottom: 1rem; } }
-    @media (min-width: 850px) {
-      .big-image__heading {
-        font-size: 3.3rem;
-        font-weight: 300;
-        line-height: 4rem; } }
-  .big-image__text {
-    line-height: 1rem;
-    font-size: 0.75rem;
-    font-weight: 100;
-    color: white;
-    margin-bottom: 1rem; }
-    @media (min-width: 576px) {
-      .big-image__text {
-        width: 80%; } }
-    @media (min-width: 768px) {
-      .big-image__text {
-        width: 60%; } }
-    @media (min-width: 850px) {
-      .big-image__text {
-        width: 50%;
-        margin-top: 0.5rem; } }
-  .big-image__btn {
-    background: #6d3d99;
-    border: none;
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem;
-    font-size: 0.75rem;
-    font-weight: 400;
-    width: 6rem;
-    border-radius: 4px;
-    justify-content: center; }
+    .big-image__content .big-image__heading {
+      font-size: 3rem;
+      color: #ffc740;
+      font-weight: 300; }
+      @media (min-width: 576px) {
+        .big-image__content .big-image__heading {
+          width: 80%; } }
+      @media (min-width: 768px) {
+        .big-image__content .big-image__heading {
+          width: 70%;
+          margin-bottom: 1rem; } }
+      @media (min-width: 850px) {
+        .big-image__content .big-image__heading {
+          font-size: 3.3rem;
+          font-weight: 300;
+          line-height: 4rem; } }
+    .big-image__content .big-image__text {
+      line-height: 1rem;
+      font-size: 0.75rem;
+      font-weight: 100;
+      color: white;
+      margin-bottom: 1rem; }
+      @media (min-width: 576px) {
+        .big-image__content .big-image__text {
+          width: 80%; } }
+      @media (min-width: 768px) {
+        .big-image__content .big-image__text {
+          width: 60%; } }
+      @media (min-width: 850px) {
+        .big-image__content .big-image__text {
+          width: 50%;
+          margin-top: 0.5rem; } }
+    .big-image__content .big-image__btn {
+      background: #6d3d99;
+      border: none;
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 400;
+      width: 6rem;
+      border-radius: 4px;
+      justify-content: center; }
 
 .posts {
   flex-direction: column; }
