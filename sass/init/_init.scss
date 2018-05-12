@@ -1,27 +1,21 @@
 html {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  flex-direction: column;
-  min-width: 320px;
-  font-weight: 100;
-  @media (min-width: 400px) {
-    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    flex-direction: column;
+    min-width: 320px;
+    font-weight: 100;
   }
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  flex-direction: column;
-}
-
-.container-for-sticky-footer {
-  flex: 1 0 auto;
-  flex-direction: column;
-}
-.container {
-  flex-direction: column;
-}
+  
+  html,
+  body {
+    height: 100%;
+  }
+  
+  body {
+    flex-direction: column;
+  }
+  
+  .container-for-sticky-footer {
+    flex: 1 0 auto;
+    flex-direction: column;
+  }
