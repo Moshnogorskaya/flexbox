@@ -133,27 +133,26 @@
             .search__field {
               height: 100%;
               padding: 0 0 0 10px;
-              &_violet-border {
-                border: 1px solid #6d3d99;
-                width: 100%;
-                margin-bottom: 20px;
-              }
-            }            
+            }
+            .search__field_violet-border {
+              border: 1px solid #6d3d99;
+              width: 100%;
+              margin-bottom: 20px;
+            }
             .search__btn {
               text-decoration: none;
               padding: 0;
               margin: 0;
               padding: 0 2%;
-              &_violet {
-                color: white;
-                font-weight: bold !important;
-                background-color: #9b51e0;
-                height: 22px;
-                line-height: 22px;
-              }
             }
+            .search__btn_violet {
+              color: white;
+              font-weight: bold !important;
+              background-color: #9b51e0;
+              height: 22px;
+              line-height: 22px;
             }
-            
+          }
           .xs-nav-body__link {
             text-decoration: none;
             color: black;

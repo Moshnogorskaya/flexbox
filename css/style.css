@@ -243,21 +243,21 @@ body {
             .header .menu:target .xs-nav-body__item .search_small-screen .search__field {
               height: 100%;
               padding: 0 0 0 10px; }
-              .header .menu:target .xs-nav-body__item .search_small-screen .search__field_violet-border {
-                border: 1px solid #6d3d99;
-                width: 100%;
-                margin-bottom: 20px; }
+            .header .menu:target .xs-nav-body__item .search_small-screen .search__field_violet-border {
+              border: 1px solid #6d3d99;
+              width: 100%;
+              margin-bottom: 20px; }
             .header .menu:target .xs-nav-body__item .search_small-screen .search__btn {
               text-decoration: none;
               padding: 0;
               margin: 0;
               padding: 0 2%; }
-              .header .menu:target .xs-nav-body__item .search_small-screen .search__btn_violet {
-                color: white;
-                font-weight: bold !important;
-                background-color: #9b51e0;
-                height: 22px;
-                line-height: 22px; }
+            .header .menu:target .xs-nav-body__item .search_small-screen .search__btn_violet {
+              color: white;
+              font-weight: bold !important;
+              background-color: #9b51e0;
+              height: 22px;
+              line-height: 22px; }
           .header .menu:target .xs-nav-body__item .xs-nav-body__link {
             text-decoration: none;
             color: black;
