@@ -1,11 +1,19 @@
-let color = function changeColorOfSomeHeadings (elements){
-
-}
-
-
+let color = function changeColorOfSomeHeadings(elements, newColor) {
+  function changeColor(index) {
+    let heading = elements[index].querySelector(".post__color-block");
+    heading.style.background = newColor;
+  }
+  changeColor(0);
+  for (i = 3; i < elements.length; i += 4) {
+    changeColor(i);
+    if (elements[i + 1]) changeColor(i + 1);
+  }
+};
 
 let makeBlocks = function generateBlocksWithDataFromExtSource(paras = 4) {
   if (paras < 0) paras = 0;
+
+  // Generate required amount of empty blocks
   const postTemplate = document.querySelector(".post_half");
   const postContainer = document.querySelector(".posts");
   for (i = 0; i < paras; i += 1) {
@@ -14,22 +22,21 @@ let makeBlocks = function generateBlocksWithDataFromExtSource(paras = 4) {
     postContainer.insertBefore(duplicate, null);
   }
   let duplicates = postContainer.querySelectorAll(".duplicate");
-  //color(duplicates, 'yellow');
+  color(duplicates, "#FFC740");
 
+  // Insert text into blocks
   let requestText = new XMLHttpRequest();
   let urlText = "https://baconipsum.com/api/?type=all-meat&paras=" + paras;
   requestText.open("GET", urlText);
   requestText.send();
   requestText.onreadystatechange = () => {
     if (requestText.readyState === 4) {
-      let extPage;
-      extPage = JSON.parse(requestText.responseText); // extPages
+      let paragraphs = JSON.parse(requestText.responseText);
       duplicates.forEach((duplicate, i) => {
         let textPlaceholder = duplicate.querySelector(".post__main-text");
-        textPlaceholder.innerHTML = extPage[i];
-      });
-      
-      duplicates.forEach(duplicate => {
+        textPlaceholder.innerHTML = paragraphs[i];
+
+        // Insert Images
         let requestImage = new XMLHttpRequest();
         let urlImage = "https://picsum.photos/200/?random";
         requestImage.open("GET", urlImage);
@@ -37,18 +44,16 @@ let makeBlocks = function generateBlocksWithDataFromExtSource(paras = 4) {
         requestImage.onreadystatechange = () => {
           if (requestImage.readyState === 4) {
             let imagePlaceholder = duplicate.querySelector(".post__image");
-            imagePlaceholder.style.background = "url("+requestImage.responseURL+")";
-            duplicate.style.display = "flex";
+            imagePlaceholder.style.background =
+              "url(" + requestImage.responseURL + ")";
 
+            // Make blocks visible
+            duplicate.style.display = "flex";
           }
         };
       });
-      
     }
   };
-
-
-  
 };
 
-makeBlocks();
+makeBlocks(10);
