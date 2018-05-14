@@ -399,6 +399,8 @@ display: none;
   border: 2px solid white;
   outline: 2px solid #FFC740;
   margin-top: 1rem;
+  background-image: url(loading.jpg);
+  background-size: contain;
 }
 
 .visible {

@@ -20,6 +20,7 @@ const makeBlocks = function generateBlocksWithDataFromExtSource(paras = 4) {
     const duplicate = postTemplate.cloneNode(true);
     duplicate.classList.add('duplicate');
     postContainer.insertBefore(duplicate, null);
+    duplicate.classList.add('visible');
   }
   const duplicates = postContainer.querySelectorAll('.duplicate');
   color(duplicates, '#FFC740');
@@ -50,7 +51,6 @@ const makeBlocks = function generateBlocksWithDataFromExtSource(paras = 4) {
             imagePlaceholder.style.backgroundSize = 'cover';
 
             // Make blocks visible
-            duplicate.classList.add('visible');
           }
         };
       });
