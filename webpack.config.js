@@ -1,13 +1,13 @@
-const path = require("path");
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+// const path = require('path');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: "./src/index.js"
+    app: './src/index.js',
   },
   devServer: {
-    contentBase: "./dist",
-    stats: "errors-only"
+    contentBase: './dist',
+    stats: 'errors-only',
   },
   module: {
     rules: [
@@ -16,37 +16,37 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: "babel-loader",
-            options: { presets: ["es2015"] }
+            loader: 'babel-loader',
+            options: { presets: ['es2015'] },
           },
           {
-            loader: "eslint-loader"
-          }
-        ]
+            loader: 'eslint-loader',
+          },
+        ],
       },
       {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader",
-            options: { minimize: true }
-          }
-        ]
+            loader: 'html-loader',
+            options: { minimize: true },
+          },
+        ],
       },
       {
         test: /\.scss$/,
         use: [
-          "style-loader", // creates style nodes from JS strings
-          "css-loader", // translates CSS into CommonJS
-          "sass-loader" // compiles Sass to CSS
-        ]
-      }
-    ]
+          'style-loader', // creates style nodes from JS strings
+          'css-loader', // translates CSS into CommonJS
+          'sass-loader', // compiles Sass to CSS
+        ],
+      },
+    ],
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html"
-    })
-  ]
+      template: './src/index.html',
+      filename: './index.html',
+    }),
+  ],
 };
