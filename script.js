@@ -15,7 +15,9 @@ let makeBlocks = function generateBlocksWithDataFromExtSource(paras=4) {
       for (let i = 0; i < paras; i += 1) {
         let dupPost = postTemplate.cloneNode(true);
         let textPlaceholder = dupPost.querySelector(".post__main-text");
+        let imagePlaceholder = dupPost.querySelector('.post__image');
         textPlaceholder.innerHTML = extPage[i];
+        imagePlaceholder.style.backgroundImage = "url('https://picsum.photos/200/?random')";
         dupPost.style.display = "flex";
         postContainer.insertBefore(dupPost, null);
       }
@@ -23,4 +25,4 @@ let makeBlocks = function generateBlocksWithDataFromExtSource(paras=4) {
   };
 };
 
-makeBlocks();
+makeBlocks(3);
