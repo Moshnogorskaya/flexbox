@@ -55,7 +55,6 @@ const makeBlocks = function generateBlocksWithDataFromExtSource(paras = 4) {
       console.log('request text failed', err);
     }
   }
-  insertText(urlText);
 
   async function insertImage(url, placeholder) {
     try {
@@ -68,25 +67,11 @@ const makeBlocks = function generateBlocksWithDataFromExtSource(paras = 4) {
     }
   }
 
+  insertText(urlText);
+
   duplicates.forEach((duplicate) => {
     insertImage(urlImage, duplicate);
   });
-
-  // request(urlText).then((response) => {
-  //   const paragraphs = JSON.parse(response.responseText);
-  //   duplicates.forEach((duplicate, i) => {
-  //     const textPlaceholder = duplicate.querySelector('.post__main-text');
-  //     textPlaceholder.innerHTML = paragraphs[i];
-  //   });
-  // });
-
-  // duplicates.forEach((duplicate) => {
-  //   request(urlImage).then((response) => {
-  //     const imagePlaceholder = duplicate.querySelector('.post__image');
-  //     imagePlaceholder.style.background = `url('${response.responseURL}')`;
-  //     imagePlaceholder.style.backgroundSize = 'cover';
-  //   });
-  // });
 };
 
 makeBlocks(8);
