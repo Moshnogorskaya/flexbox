@@ -25,37 +25,42 @@ const makeBlocks = function generateBlocksWithDataFromExtSource(paras = 4) {
   const duplicates = postContainer.querySelectorAll('.duplicate');
   color(duplicates, '#FFC740');
 
-  // Insert text into blocks
-  const requestText = new XMLHttpRequest();
   const urlText = `https://baconipsum.com/api/?type=all-meat&paras=${paras}`;
-  requestText.open('GET', urlText);
-  requestText.send();
-  requestText.onreadystatechange = () => {
-    if (requestText.readyState === 4) {
-      const paragraphs = JSON.parse(requestText.responseText);
-      duplicates.forEach((duplicate, i) => {
-        const textPlaceholder = duplicate.querySelector('.post__main-text');
-        textPlaceholder.innerHTML = paragraphs[i];
+  const urlImage = 'https://picsum.photos/200/?random';
 
-        // Insert Images
-        const requestImage = new XMLHttpRequest();
-        const urlImage = 'https://picsum.photos/200/?random';
-        requestImage.open('GET', urlImage);
-        requestImage.send();
-        requestImage.onreadystatechange = () => {
-          if (requestImage.readyState === 4) {
-            const imagePlaceholder = duplicate.querySelector('.post__image');
-            imagePlaceholder.style.background = `url('${
-              requestImage.responseURL
-            }')`;
-            imagePlaceholder.style.backgroundSize = 'cover';
+  function insertText(url) {
+    const requestText = new XMLHttpRequest();
+    requestText.open('GET', url);
+    requestText.send();
+    requestText.onreadystatechange = () => {
+      if (requestText.readyState === 4) {
+        const paragraphs = JSON.parse(requestText.responseText);
+        duplicates.forEach((duplicate, i) => {
+          const textPlaceholder = duplicate.querySelector('.post__main-text');
+          textPlaceholder.innerHTML = paragraphs[i];
+        });
+      }
+    };
+  }
 
-            // Make blocks visible
-          }
-        };
-      });
-    }
-  };
+  function insertImage(url, placeholder) {
+    const requestImage = new XMLHttpRequest();
+    requestImage.open('GET', url);
+    requestImage.send();
+    requestImage.onreadystatechange = () => {
+      if (requestImage.readyState === 4) {
+        const imagePlaceholder = placeholder.querySelector('.post__image');
+        imagePlaceholder.style.background = `url('${
+          requestImage.responseURL
+        }')`;
+        imagePlaceholder.style.backgroundSize = 'cover';
+      }
+    };
+  }
+
+  insertText(urlText);
+
+  duplicates.forEach(duplicate => insertImage(urlImage, duplicate));
 };
 
 makeBlocks(5);
