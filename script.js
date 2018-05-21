@@ -28,7 +28,7 @@ const makeBlocks = function generateBlocksWithDataFromExtSource(paras = 4) {
   const urlText = `https://baconipsum.com/api/?type=all-meat&paras=${paras}`;
   const urlImage = 'https://picsum.photos/200/?random';
 
-  function insertText(url) {
+  const insertText = (url) => {
     const requestText = new XMLHttpRequest();
     requestText.open('GET', url);
     requestText.send();
@@ -41,9 +41,9 @@ const makeBlocks = function generateBlocksWithDataFromExtSource(paras = 4) {
         });
       }
     };
-  }
+  };
 
-  function insertImage(url, placeholder) {
+  const insertImage = (url, placeholder) => {
     const requestImage = new XMLHttpRequest();
     requestImage.open('GET', url);
     requestImage.send();
@@ -56,7 +56,7 @@ const makeBlocks = function generateBlocksWithDataFromExtSource(paras = 4) {
         imagePlaceholder.style.backgroundSize = 'cover';
       }
     };
-  }
+  };
 
   insertText(urlText);
 
