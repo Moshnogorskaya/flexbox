@@ -25,10 +25,10 @@ const makeBlocks = function generateBlocksWithDataFromExtSource(paras = 4) {
   const duplicates = postContainer.querySelectorAll('.duplicate');
   color(duplicates, '#FFC740');
 
-  const request = urlT =>
+  const request = requestURL =>
     new Promise((resolve, reject) => {
       const req = new XMLHttpRequest();
-      req.open('GET', urlT);
+      req.open('GET', requestURL);
       req.onload = () => {
         if (req.status >= 200 && req.status < 300) {
           resolve(req);
@@ -43,8 +43,8 @@ const makeBlocks = function generateBlocksWithDataFromExtSource(paras = 4) {
   const urlText = `https://baconipsum.com/api/?type=all-meat&paras=${paras}`;
   const urlImage = 'https://picsum.photos/200/?random';
 
-  const insertText = (url) => {
-    return request(url)
+  const insertText = url =>
+    request(url)
       .then((response) => {
         const paragraphs = JSON.parse(response.responseText);
         duplicates.forEach((duplicate, i) => {
@@ -53,17 +53,15 @@ const makeBlocks = function generateBlocksWithDataFromExtSource(paras = 4) {
         });
       })
       .catch(err => console.log('request text failed', err));
-  };
 
-  const insertImage = (url, placeholder) => {
-    return request(url)
+  const insertImage = (url, placeholder) =>
+    request(url)
       .then((response) => {
         const imagePlaceholder = placeholder.querySelector('.post__image');
         imagePlaceholder.style.background = `url('${response.responseURL}')`;
         imagePlaceholder.style.backgroundSize = 'cover';
       })
       .catch(err => console.log('request image failed', err));
-  };
 
   insertText(urlText);
 
