@@ -1,0 +1,184 @@
+.header {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  @media (min-width: 576px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .menu,
+    .menu-toggle,
+    .menu .menu-close__link {
+      display: none;
+    }
+  }
+  .logo {
+    position: relative;
+    @media (min-width: 576px) {
+      flex-grow: 1;
+    }
+    @media (min-width: 850px) {
+      margin-top: 1rem;
+    }
+    &__square {
+      height: 48px;
+      width: 50px;
+      border: 3px solid $bright;
+    }
+    &__text {
+      position: absolute;
+      height: 26px;
+      min-width: 14px;
+      top: 12px;
+      left: 22px;
+      background: $base;
+      font-weight: bold;
+      font-size: 21px;
+      line-height: 30px;
+      white-space: nowrap;
+    }
+  }
+  .search_big-screen {
+    display: none;
+    @media (min-width: 576px) {
+      display: flex;
+      height: 20px;
+      width: 9rem;
+      font-size: 0.875rem;
+      .search__field {
+        height: 100%;
+        padding: 0 0 0 10px;
+        &_violet-border {
+          border: 1px solid $dark;
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+      .search__btn {
+        text-decoration: none;
+        padding: 0;
+        margin: 0;
+        padding: 0 2%;
+        &_violet {
+          color: $base;
+          font-weight: bold !important;
+          background-color: $contrast;
+          height: 22px;
+          line-height: 22px;
+        }
+      }
+    }
+    @media (min-width: 850px) {
+      height: 30px;
+      width: 11rem;
+      font-size: 0.7rem;
+      margin-top: 1rem;
+      .search__btn_violet {
+        height: 32px;
+        line-height: 32px;
+        font-weight: 400;
+        padding: 0 0.5rem;
+      }
+    }
+  }
+  .menu-toggle {
+    position: fixed;
+    top: 0.3rem;
+    right: 0;
+    text-decoration: none;
+    font-size: 3rem;
+    color: $bright;
+    border: 0;
+    outline: 0;
+  }
+  .menu {
+    position: absolute;
+    display: none;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    flex-direction: column;
+    &:target {
+      display: flex;
+      .menu-close__link {
+        z-index: 1001;
+      }
+      & + .backdrop {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 998;
+        cursor: default;
+      }
+      .menu-close__link {
+        position: absolute;
+        right: 80%;
+        top: 25px;
+        font-size: 3rem;
+        color: $bright;
+        text-decoration: none;
+        line-height: 20px;
+      }
+      .xs-nav-body {
+        list-style: none;
+        min-height: 100%;
+        background: $base;
+        padding: 70px 2px 0 2px;
+        flex-direction: column;
+        &__item {
+          flex-direction: column;
+          .search_small-screen {
+            height: 20px;
+            .search__field {
+              height: 100%;
+              padding: 0 0 0 10px;
+              &_violet-border {
+                border: 1px solid #6d3d99;
+                width: 100%;
+                margin-bottom: 20px;
+              }
+            }            
+            .search__btn {
+              text-decoration: none;
+              padding: 0;
+              margin: 0;
+              padding: 0 2%;
+              &_violet {
+                color: white;
+                font-weight: bold !important;
+                background-color: #9b51e0;
+                height: 22px;
+                line-height: 22px;
+              }
+            }
+            }
+            
+          .xs-nav-body__link {
+            text-decoration: none;
+            color: black;
+            height: 2rem;
+            line-height: 2rem;
+            justify-content: center;
+            &:hover {
+              background: $bright;
+            }
+            &_active {
+              background: $bright;
+              color: $base;
+              margin-top: 20px;
+            }
+          }
+          
+        }
+      }
+    }
+  }
+}
+
+@supports (position: fixed) {
+  .menu,
+  .menu:target + .backdrop {
+    position: fixed;
+  }
+}

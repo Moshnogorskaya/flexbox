@@ -1,0 +1,23 @@
+// Color
+$bright: #ffc740;
+$contrast: #9b51e0;
+$dark: #6d3d99;
+$base: white;
+
+// Init
+@import "init/reset";
+@import "init/init";
+
+// Header
+@import "header/progressbar";
+@import "header/header";
+@import "header/menu";
+
+// Main
+@import "main/big_image";
+@import "main/posts";
+@import "main/news_list";
+@import "main/clients";
+
+// Footer
+@import "footer/footer";
